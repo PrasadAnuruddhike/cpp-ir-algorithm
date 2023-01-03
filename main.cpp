@@ -125,21 +125,21 @@
           
 // Different Packets with footer, HDR_MARK > HDR_SPACE          
 // bits1, bits2, HDR_MARK, HDR_SPACE, BIT_MARK, ONE_SPACE, ZERO_SPACE, GAP, FTR_SPACE, hex_value1, hex_value2
-// uint16_t ir_data[] = {
-//                         31074, 
-//                         4567, 9345,
-//                         572, 1691, 576, 1691, 570, 1691, 573, 560, 573, 560, 569, 560, 572, 559, 574, 558, 
-//                         571, 1680, 578, 1695, 561, 566, 570, 560, 563, 552, 559, 1689, 569, 551, 568, 1691,  
-//                         574,
-//                         12031,
-//                         4560, 9345,
-//                         575, 562, 573, 565, 568, 564, 573, 1698, 573, 562, 575, 562, 571, 562, 576, 558, 
-//                         571, 1680, 578, 1695, 561, 566, 570, 560, 563, 552, 559, 1689, 569, 551, 568, 1691, 					
-//                         574, 1700, 573, 1698, 573, 1700, 572, 561, 575, 1696, 575, 1696, 577, 1698, 573, 1700,
-//                         574, 
-//                         12967, 
-//                         4567, 2365
-//                     };
+uint16_t ir_data[] = {
+                        31074, 
+                        4567, 9345,
+                        572, 1691, 576, 1691, 570, 1691, 573, 560, 573, 560, 569, 560, 572, 559, 574, 558, 
+                        571, 1680, 578, 1695, 561, 566, 570, 560, 563, 552, 559, 1689, 569, 551, 568, 1691,  
+                        574,
+                        12031,
+                        4560, 9345,
+                        575, 562, 573, 565, 568, 564, 573, 1698, 573, 562, 575, 562, 571, 562, 576, 558, 
+                        571, 1680, 578, 1695, 561, 566, 570, 560, 563, 552, 559, 1689, 569, 551, 568, 1691, 					
+                        574, 1700, 573, 1698, 573, 1700, 572, 561, 575, 1696, 575, 1696, 577, 1698, 573, 1700,
+                        574, 
+                        12967, 
+                        4567, 2365
+                    };
 
 // Three Different packets
 // bits1, bits2, bits3, HDR_MARK, HDR_SPACE, BIT_MARK, ONE_SPACE, ZERO_SPACE, GAP, FTR_SPACE, hex_value1, hex_value2, hex_value3
@@ -187,81 +187,88 @@
 //                         4567, 2365
 //                     };
 
-uint16_t ir_data[] = {
-                        60196, 
-                        3485, 1755,  
-                        393, 495, 398, 1283, 397, 496, 396, 496, 396, 497, 396, 505, 398, 495, 397, 495, 						// 0000 0010
-                        398, 494, 398, 493, 399, 497, 396, 496, 392, 497, 397, 1287, 393, 499, 394, 496, 						// 0010 0000
-                        396, 496, 396, 496, 396, 497, 394, 498, 398, 494, 399, 1280, 400, 1284, 394, 1287, 						// 1110 0000
-                        393, 499, 395, 495, 396, 1284, 398, 495, 398, 494, 398, 494, 398, 495, 398, 496, 						// 0000 0100
-                        392, 500, 397, 496, 394, 498, 394, 495, 397, 495, 397, 499, 394, 496, 396, 496, 						// 0000 0000
-                        396, 1285, 398, 494, 395, 497, 394, 499, 398, 1281, 399, 1281, 397, 495, 398, 498, 						// 0011 0001
-                        394, 496, 396, 497, 395, 497, 394, 498, 394, 498, 399, 1280, 400, 496, 393, 499, 						// 0010 0000
-                        392, 497, 397, 494, 399, 498, 394, 495, 397, 494, 399, 496, 396, 496, 396, 1284, 						// 1000 0000
-                        394, 1286, 399, 492, 400, 496, 392, 500, 396, 493, 397, 1283, 398, 498, 394, 1284,						// 1010 0001 
-                        397, 496, 398, 494, 395, 498, 393, 499, 398, 496, 393, 496, 395, 497, 400, 496, 						// 0000 0000
-                        394, 499, 393, 495, 397, 495, 398, 495, 397, 497, 395, 497, 396, 496, 394, 498, 						// 0000 0000
-                        394, 499, 394, 1284, 396, 1289, 393, 495, 398, 494, 398, 499, 393, 495, 398, 496,						// 0000 0110
-                        396, 496, 396, 496, 396, 497, 393, 499, 394, 498, 394, 1285, 395, 1285, 398, 494, 						// 0110 0000
-                        398, 494, 398, 495, 398, 493, 399, 493, 399, 497, 396, 496, 394, 495, 397, 494, 						// 0000 0000
-                        398, 499, 394, 495, 397, 496, 396, 497, 396, 496, 393, 499, 395, 497, 394, 499, 						// 0000 0000
-                        393, 499, 394, 496, 396, 497, 395, 497, 395, 497, 398, 494, 398, 495, 398, 1284, 						// 1000 0000
-                        396, 496, 396, 496, 394, 499, 393, 499, 394, 495, 397, 499, 394, 496, 396, 496,						 	// 0000 0000
-                        396, 497, 395, 1285, 394, 1288, 393, 500, 396, 496, 396, 496, 394, 495, 397, 495, 						// 0000 0110
-                        398, 498, 394, 497, 395, 1285, 396, 496, 398, 494, 395, 1286, 394, 1288, 393, 500,						// 0110 0100
-                        392, 
-                        10152, 
-                        3544, 1746,
-                        393, 495, 398, 1283, 397, 496, 396, 496, 396, 497, 396, 505, 398, 495, 397, 495, 						
-                        398, 494, 398, 493, 399, 497, 396, 496, 392, 497, 397, 1287, 393, 499, 394, 496, 						
-                        396, 496, 396, 496, 396, 497, 394, 498, 398, 494, 399, 1280, 400, 1284, 394, 1287, 						
-                        393, 499, 395, 495, 396, 1284, 398, 495, 398, 494, 398, 494, 398, 495, 398, 496, 						
-                        392, 500, 397, 496, 394, 498, 394, 495, 397, 495, 397, 499, 394, 496, 396, 496, 						
-                        396, 1285, 398, 494, 395, 497, 394, 499, 398, 1281, 399, 1281, 397, 495, 398, 498, 						
-                        394, 496, 396, 497, 395, 497, 394, 498, 394, 498, 399, 1280, 400, 496, 393, 499, 						
-                        392, 497, 397, 494, 399, 498, 394, 495, 397, 494, 399, 496, 396, 496, 396, 1284, 						
-                        394, 1286, 399, 492, 400, 496, 392, 500, 396, 493, 397, 1283, 398, 498, 394, 1284,						 
-                        397, 496, 398, 494, 395, 498, 393, 499, 398, 496, 393, 496, 395, 497, 400, 496, 						
-                        394, 499, 393, 495, 397, 495, 398, 495, 397, 497, 395, 497, 396, 496, 394, 498, 						
-                        394, 499, 394, 1284, 396, 1289, 393, 495, 398, 494, 398, 499, 393, 495, 398, 496,						
-                        396, 496, 396, 496, 396, 497, 393, 499, 394, 498, 394, 1285, 395, 1285, 398, 494, 						
-                        398, 494, 398, 495, 398, 493, 399, 493, 399, 497, 396, 496, 394, 495, 397, 494, 						
-                        398, 499, 394, 495, 397, 496, 396, 497, 396, 496, 393, 499, 395, 497, 394, 499, 						
-                        393, 499, 394, 496, 396, 497, 395, 497, 395, 497, 398, 494, 398, 495, 398, 1284, 						
-                        396, 496, 396, 496, 394, 499, 393, 499, 394, 495, 397, 499, 394, 496, 396, 496,						 	
-                        396, 497, 395, 1285, 394, 1288, 393, 500, 396, 496, 396, 496, 394, 495, 397, 495, 						
-                        398, 498, 394, 497, 395, 1275, 396, 496, 398, 494, 395, 1286, 394, 1288, 393, 500,
-                        392, 
-                        10159, 
-                        3544, 1746,
-                        393, 495, 398, 1283, 397, 496, 396, 496, 396, 497, 396, 505, 398, 495, 397, 495, 						
-                        398, 494, 398, 493, 399, 497, 396, 496, 392, 497, 397, 1287, 393, 499, 394, 496, 						
-                        396, 496, 396, 496, 396, 497, 394, 498, 398, 494, 399, 1280, 400, 1284, 394, 1287, 						
-                        393, 499, 395, 495, 396, 1284, 398, 495, 398, 494, 398, 494, 398, 495, 398, 496, 						
-                        392, 500, 397, 496, 394, 498, 394, 495, 397, 495, 397, 499, 394, 496, 396, 496, 						
-                        396, 1285, 398, 494, 395, 497, 394, 499, 398, 1281, 399, 1281, 397, 495, 398, 498, 						
-                        394, 496, 396, 497, 395, 497, 394, 498, 394, 498, 399, 1280, 400, 496, 393, 499, 						
-                        392, 497, 397, 494, 399, 498, 394, 495, 397, 494, 399, 496, 396, 496, 396, 1284, 						
-                        394, 1286, 399, 492, 400, 496, 392, 500, 396, 493, 397, 1283, 398, 498, 394, 1284,						 
-                        397, 496, 398, 494, 395, 498, 393, 499, 398, 496, 393, 496, 395, 497, 400, 496, 						
-                        394, 499, 393, 495, 397, 495, 398, 495, 397, 497, 395, 497, 396, 496, 394, 498, 						
-                        394, 499, 394, 1284, 396, 1289, 393, 495, 398, 494, 398, 499, 393, 495, 398, 496,						
-                        396, 496, 396, 496, 396, 497, 393, 499, 394, 498, 394, 1285, 395, 1285, 398, 494, 						
-                        398, 494, 398, 495, 398, 493, 399, 493, 399, 497, 396, 496, 394, 495, 397, 494, 						
-                        398, 499, 394, 495, 397, 496, 396, 497, 396, 496, 393, 499, 395, 497, 394, 499, 						
-                        393, 499, 394, 496, 396, 497, 395, 497, 395, 497, 398, 494, 398, 495, 398, 1284, 						
-                        396, 496, 396, 496, 394, 499, 393, 499, 394, 495, 397, 499, 394, 496, 396, 496,						 	
-                        396, 497, 395, 1285, 394, 1288, 393, 500, 396, 496, 396, 496, 394, 495, 397, 495, 						
-                        398, 498, 394, 490, 395, 1265, 396, 496, 398, 494, 395, 1286, 394, 1288, 393, 500,						
-                        // 389, 
-                        // 10150, 
-                        // 3544, 2365
-                    };
+// uint16_t ir_data[] = {
+//                         60196, 
+//                         3485, 1755,  
+//                         393, 495, 398, 1283, 397, 496, 396, 496, 396, 497, 396, 505, 398, 495, 397, 495, 						// 0000 0010
+//                         398, 494, 398, 493, 399, 497, 396, 496, 392, 497, 397, 1287, 393, 499, 394, 496, 						// 0010 0000
+//                         396, 496, 396, 496, 396, 497, 394, 498, 398, 494, 399, 1280, 400, 1284, 394, 1287, 						// 1110 0000
+//                         393, 499, 395, 495, 396, 1284, 398, 495, 398, 494, 398, 494, 398, 495, 398, 496, 						// 0000 0100
+//                         392, 500, 397, 496, 394, 498, 394, 495, 397, 495, 397, 499, 394, 496, 396, 496, 						// 0000 0000
+//                         396, 1285, 398, 494, 395, 497, 394, 499, 398, 1281, 399, 1281, 397, 495, 398, 498, 						// 0011 0001
+//                         394, 496, 396, 497, 395, 497, 394, 498, 394, 498, 399, 1280, 400, 496, 393, 499, 						// 0010 0000
+//                         392, 497, 397, 494, 399, 498, 394, 495, 397, 494, 399, 496, 396, 496, 396, 1284, 						// 1000 0000
+//                         394, 1286, 399, 492, 400, 496, 392, 500, 396, 493, 397, 1283, 398, 498, 394, 1284,						// 1010 0001 
+//                         397, 496, 398, 494, 395, 498, 393, 499, 398, 496, 393, 496, 395, 497, 400, 496, 						// 0000 0000
+//                         394, 499, 393, 495, 397, 495, 398, 495, 397, 497, 395, 497, 396, 496, 394, 498, 						// 0000 0000
+//                         394, 499, 394, 1284, 396, 1289, 393, 495, 398, 494, 398, 499, 393, 495, 398, 496,						// 0000 0110
+//                         396, 496, 396, 496, 396, 497, 393, 499, 394, 498, 394, 1285, 395, 1285, 398, 494, 						// 0110 0000
+//                         398, 494, 398, 495, 398, 493, 399, 493, 399, 497, 396, 496, 394, 495, 397, 494, 						// 0000 0000
+//                         398, 499, 394, 495, 397, 496, 396, 497, 396, 496, 393, 499, 395, 497, 394, 499, 						// 0000 0000
+//                         393, 499, 394, 496, 396, 497, 395, 497, 395, 497, 398, 494, 398, 495, 398, 1284, 						// 1000 0000
+//                         396, 496, 396, 496, 394, 499, 393, 499, 394, 495, 397, 499, 394, 496, 396, 496,						 	// 0000 0000
+//                         396, 497, 395, 1285, 394, 1288, 393, 500, 396, 496, 396, 496, 394, 495, 397, 495, 						// 0000 0110
+//                         398, 498, 394, 497, 395, 1285, 396, 496, 398, 494, 395, 1286, 394, 1288, 393, 500,						// 0110 0100
+//                         392, 
+//                         10152, 
+//                         3544, 1746,
+//                         393, 495, 398, 1283, 397, 496, 396, 496, 396, 497, 396, 505, 398, 495, 397, 495, 						
+//                         398, 494, 398, 493, 399, 497, 396, 496, 392, 497, 397, 1287, 393, 499, 394, 496, 						
+//                         396, 496, 396, 496, 396, 497, 394, 498, 398, 494, 399, 1280, 400, 1284, 394, 1287, 						
+//                         393, 499, 395, 495, 396, 1284, 398, 495, 398, 494, 398, 494, 398, 495, 398, 496, 						
+//                         392, 500, 397, 496, 394, 498, 394, 495, 397, 495, 397, 499, 394, 496, 396, 496, 						
+//                         396, 1285, 398, 494, 395, 497, 394, 499, 398, 1281, 399, 1281, 397, 495, 398, 498, 						
+//                         394, 496, 396, 497, 395, 497, 394, 498, 394, 498, 399, 1280, 400, 496, 393, 499, 						
+//                         392, 497, 397, 494, 399, 498, 394, 495, 397, 494, 399, 496, 396, 496, 396, 1284, 						
+//                         394, 1286, 399, 492, 400, 496, 392, 500, 396, 493, 397, 1283, 398, 498, 394, 1284,						 
+//                         397, 496, 398, 494, 395, 498, 393, 499, 398, 496, 393, 496, 395, 497, 400, 496, 						
+//                         394, 499, 393, 495, 397, 495, 398, 495, 397, 497, 395, 497, 396, 496, 394, 498, 						
+//                         394, 499, 394, 1284, 396, 1289, 393, 495, 398, 494, 398, 499, 393, 495, 398, 496,						
+//                         396, 496, 396, 496, 396, 497, 393, 499, 394, 498, 394, 1285, 395, 1285, 398, 494, 						
+//                         398, 494, 398, 495, 398, 493, 399, 493, 399, 497, 396, 496, 394, 495, 397, 494, 						
+//                         398, 499, 394, 495, 397, 496, 396, 497, 396, 496, 393, 499, 395, 497, 394, 499, 						
+//                         393, 499, 394, 496, 396, 497, 395, 497, 395, 497, 398, 494, 398, 495, 398, 1284, 						
+//                         396, 496, 396, 496, 394, 499, 393, 499, 394, 495, 397, 499, 394, 496, 396, 496,						 	
+//                         396, 497, 395, 1285, 394, 1288, 393, 500, 396, 496, 396, 496, 394, 495, 397, 495, 						
+//                         398, 498, 394, 497, 395, 1275, 396, 496, 398, 494, 395, 1286, 394, 1288, 393, 500,
+//                         392, 
+//                         10159, 
+//                         3544, 1746,
+//                         393, 495, 398, 1283, 397, 496, 396, 496, 396, 497, 396, 505, 398, 495, 397, 495, 						
+//                         398, 494, 398, 493, 399, 497, 396, 496, 392, 497, 397, 1287, 393, 499, 394, 496, 						
+//                         396, 496, 396, 496, 396, 497, 394, 498, 398, 494, 399, 1280, 400, 1284, 394, 1287, 						
+//                         393, 499, 395, 495, 396, 1284, 398, 495, 398, 494, 398, 494, 398, 495, 398, 496, 						
+//                         392, 500, 397, 496, 394, 498, 394, 495, 397, 495, 397, 499, 394, 496, 396, 496, 						
+//                         396, 1285, 398, 494, 395, 497, 394, 499, 398, 1281, 399, 1281, 397, 495, 398, 498, 						
+//                         394, 496, 396, 497, 395, 497, 394, 498, 394, 498, 399, 1280, 400, 496, 393, 499, 						
+//                         392, 497, 397, 494, 399, 498, 394, 495, 397, 494, 399, 496, 396, 496, 396, 1284, 						
+//                         394, 1286, 399, 492, 400, 496, 392, 500, 396, 493, 397, 1283, 398, 498, 394, 1284,						 
+//                         397, 496, 398, 494, 395, 498, 393, 499, 398, 496, 393, 496, 395, 497, 400, 496, 						
+//                         394, 499, 393, 495, 397, 495, 398, 495, 397, 497, 395, 497, 396, 496, 394, 498, 						
+//                         394, 499, 394, 1284, 396, 1289, 393, 495, 398, 494, 398, 499, 393, 495, 398, 496,						
+//                         396, 496, 396, 496, 396, 497, 393, 499, 394, 498, 394, 1285, 395, 1285, 398, 494, 						
+//                         398, 494, 398, 495, 398, 493, 399, 493, 399, 497, 396, 496, 394, 495, 397, 494, 						
+//                         398, 499, 394, 495, 397, 496, 396, 497, 396, 496, 393, 499, 395, 497, 394, 499, 						
+//                         393, 499, 394, 496, 396, 497, 395, 497, 395, 497, 398, 494, 398, 495, 398, 1284, 						
+//                         396, 496, 396, 496, 394, 499, 393, 499, 394, 495, 397, 499, 394, 496, 396, 496,						 	
+//                         396, 497, 395, 1285, 394, 1288, 393, 500, 396, 496, 396, 496, 394, 495, 397, 495, 						
+//                         398, 498, 394, 490, 395, 1265, 396, 496, 398, 494, 395, 1286, 394, 1288, 393, 500,						
+//                         // 389, 
+//                         // 10150, 
+//                         // 3544, 2365
+//                     };
 
 #define MIN_DATA_BITS       8
-#define MIN_PACKET_SIZE     34        // Junk + HDR_MARK + HDR_SPACE + (DATA_BITS x 2) --> DATA_BITS = 16
+#define MIN_PACKET_SIZE     34          // Junk + HDR_MARK + HDR_SPACE + (DATA_BITS x 2) --> DATA_BITS = 16
+#define IR_HEADER_LENGTH    2           // HDR_MARK + HDR_SPACE
+#define IR_GAP_LENGTH       4           // (n-1)END_BIT + GAP + HDR_MARK + HDR_SPACE
+#define IR_FOOTER_LENGTH    4           // (n-1)END_BIT + GAP + HDR_MARK + HDR_SPACE
+#define IR_END_LENGTH       2           // END_BIT + END_SPACE
+#define IR_END_SPACE        5000
+
 uint16_t ERROR = 80;
 
+// uint16_t *generated_ir_data;
 
 typedef struct IR_VAL_HEX {
   unsigned long long int third;
@@ -320,11 +327,32 @@ void receive_ir_packet(uint32_t remote_id, uint8_t cmd, uint8_t communication_id
 void send_ir_can_message(ir_decoded_data_t ir_decoded_data, uint32_t *remote_id, uint8_t *cmd, uint8_t *communication_id);
 void can_send_hex_value(ir_decoded_data_t _ir_decode_data, uint8_t *seq_no, uint8_t communication_id, uint8_t pkt_num);
 
+void print_can_message(unsigned char *_can_message);
+void print_ir_buffer(uint16_t *_buf, int16_t size_buf);
+
 int set_bit(int n, int k);
 int clear_bit(int n, int k);
 int toggle_bit(int n, int k);
-int bit_get(int n, int k);
+int get_bit(int n, int k);
 
+
+
+void generate_rcv_can_message();
+void prepare_data_array(uint8_t *_data, unsigned char *_can_message);
+
+void ir_rd_packet_handler(unsigned char *_can_message);
+void ir_rd_data_packet(uint8_t *_seq_no, uint8_t *_data, uint8_t *communication_id);
+
+void generate_ir_signal();
+int16_t calc_bit_count();
+int section_count();
+
+void gen_ir_pattern_single_section(uint8_t _bits, ir_val_hex_t _decoded_val, int *_buf_counter, uint16_t *_ir_buf);
+void gen_ir_gap(int *_buf_counter, uint16_t *_ir_buf);
+void gen_ir_end(int *_buf_counter, uint16_t *_ir_buf);
+void gen_ir_footer(int *_buf_counter, uint16_t *_ir_buf, bool is_nec);
+
+ir_decoded_data_t received_ir_decoded_data;
 
 int main()
 {
@@ -332,11 +360,18 @@ int main()
     uint8_t cmd;
     uint8_t communication_id;
 
+
+
     remote_id = 0x23AC09;
     cmd = 0x17;
     communication_id = 0x7A;
 
-    receive_ir_packet(remote_id, cmd, communication_id);
+    int size_buf = sizeof(ir_data)/sizeof(uint16_t);
+
+    // print_ir_buffer(ir_data, size_buf);
+    // receive_ir_packet(remote_id, cmd, communication_id);
+    generate_rcv_can_message();
+    
 
     return 0;
 }  
@@ -361,7 +396,7 @@ int toggle_bit(int n, int k)
 }
 
 // Function to read the kth bit of n
-int bit_get(int n, int k)
+int get_bit(int n, int k)
 {
     int x = (n >> (k - 1)) & 0x01;
     return x;
@@ -980,9 +1015,9 @@ void send_ir_can_message(ir_decoded_data_t _ir_decode_data, uint32_t *remote_id,
     unsigned char can_message[8] = {0, 0, 0, 0, 0, 0, 0, 0};
     int _temp_packet_count = 0;
 
-    _temp_packet_count = bit_get(_ir_decode_data.flags, FIRST_PACKET)
-                            + bit_get(_ir_decode_data.flags, SECOND_PACKET)
-                            + bit_get(_ir_decode_data.flags, THIRD_PACKET);
+    _temp_packet_count = get_bit(_ir_decode_data.flags, FIRST_PACKET)
+                            + get_bit(_ir_decode_data.flags, SECOND_PACKET)
+                            + get_bit(_ir_decode_data.flags, THIRD_PACKET);
     
     printf("Packet Count %d\n", _temp_packet_count);
 
@@ -1055,7 +1090,7 @@ void send_ir_can_message(ir_decoded_data_t _ir_decode_data, uint32_t *remote_id,
                     can_message[4], can_message[5], can_message[6], can_message[7]);
         
         
-        if(bit_get(_ir_decode_data.flags, NEC_FOOTER) == 1)
+        if(get_bit(_ir_decode_data.flags, NEC_FOOTER) == 1)
         {
             printf("NEC Footer available\n");
             // generate 4th static CAN Message
@@ -1074,7 +1109,7 @@ void send_ir_can_message(ir_decoded_data_t _ir_decode_data, uint32_t *remote_id,
                     can_message[4], can_message[5], can_message[6], can_message[7]);
             
         }
-        else if(bit_get(_ir_decode_data.flags, UNIQUE_FOOTER) == 1)
+        else if(get_bit(_ir_decode_data.flags, UNIQUE_FOOTER) == 1)
         {
             printf("Unique Footer available\n");
             // generate 4th static CAN Message
@@ -1094,8 +1129,8 @@ void send_ir_can_message(ir_decoded_data_t _ir_decode_data, uint32_t *remote_id,
             
             
             
-        }else if((bit_get(_ir_decode_data.flags, NEC_FOOTER) == 0) && 
-                (bit_get(_ir_decode_data.flags, UNIQUE_FOOTER) == 0)) 
+        }else if((get_bit(_ir_decode_data.flags, NEC_FOOTER) == 0) && 
+                (get_bit(_ir_decode_data.flags, UNIQUE_FOOTER) == 0)) 
         {
             // check this part
             printf("No Footer available\n");
@@ -1119,7 +1154,7 @@ void send_ir_can_message(ir_decoded_data_t _ir_decode_data, uint32_t *remote_id,
         
         if(_temp_packet_count == 2)
         {
-            if(bit_get(_ir_decode_data.flags, REPEAT) == 0)
+            if(get_bit(_ir_decode_data.flags, REPEAT) == 0)
             {
                 can_send_hex_value(_ir_decode_data, &seq_no, *communication_id, 1);    
             }
@@ -1127,7 +1162,7 @@ void send_ir_can_message(ir_decoded_data_t _ir_decode_data, uint32_t *remote_id,
         
         else if(_temp_packet_count == 3)
         {
-            if(bit_get(_ir_decode_data.flags, REPEAT) == 0)
+            if(get_bit(_ir_decode_data.flags, REPEAT) == 0)
             {
                 can_send_hex_value(_ir_decode_data, &seq_no, *communication_id, 1);
                 can_send_hex_value(_ir_decode_data, &seq_no, *communication_id, 2);
@@ -1204,4 +1239,971 @@ void can_send_hex_value(ir_decoded_data_t _ir_decode_data, uint8_t *seq_no, uint
             can_message[4], can_message[5], can_message[6], can_message[7]);
     
     *seq_no = _temp_seq_no;
+}
+
+void print_can_message(unsigned char *_can_message)
+{
+    printf("CAN Message : %d | %2x %2x %2x %2x %2x %2x %2x %2x\n", 
+            _can_message[0], _can_message[0], _can_message[1], _can_message[2], _can_message[3],
+            _can_message[4], _can_message[5], _can_message[6], _can_message[7]);
+}
+
+void generate_rcv_can_message()
+{
+    init_decode_data(&received_ir_decoded_data);
+
+    unsigned char can_message[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+
+    // 1st CAN packet
+    can_message[0] = 0x01;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x09;      // remote id 0
+    can_message[3] = 0xAC;      // remote id 1
+    can_message[4] = 0x23;      // remote id 2
+    can_message[5] = 0x17;      // cmd
+    can_message[6] = 0x81;      // hdr_mark lsb
+    can_message[7] = 0x24;      // hdr_mark msb
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    // 2nd CAN packet
+    can_message[0] = 0x02;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0xd7;      // hdr_space lsb
+    can_message[3] = 0x11;      // hdr_space msb
+    can_message[4] = 0x3C;      // bit_mark lsb
+    can_message[5] = 0x02;      // bit_mark msb
+    can_message[6] = 0x2F;      // zero_space lsb
+    can_message[7] = 0x02;      // zero_space msb
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    // 3rd CAN packet
+    can_message[0] = 0x03;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x9b;      // one_space lsb
+    can_message[3] = 0x06;      // one_space msb
+    can_message[4] = 0b00000011;// flags
+    can_message[5] = 0xA0;      // bits[0]
+    can_message[6] = 0x90;      // bits[1]
+    can_message[7] = 0x00;      // bits[2]
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    // 4th CAN packet
+    can_message[0] = 0x04;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x39;      // gap lsb
+    can_message[3] = 0x2F;      // gap msb
+    can_message[4] = 0x29;      // ftr_space lsb
+    can_message[5] = 0x09;      // ftr_space msb
+    can_message[6] = 0xAF;      // ftr_mark lsb
+    can_message[7] = 0x1C;      // ftr_mark msb
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    // 5th CAN packet - Hex value
+    can_message[0] = 0x05;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x87;      // hex_value[0].first 0 lsb
+    can_message[3] = 0x39;      // hex_value[0].first 1
+    can_message[4] = 0x00;      // hex_value[0].first 2
+    can_message[5] = 0x00;      // hex_value[0].first 3 
+    can_message[6] = 0x00;      // hex_value[0].first 4 
+    can_message[7] = 0x00;      // hex_value[0].first 5
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    // 6th CAN packet - Hex value
+    can_message[0] = 0x06;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x00;      // hex_value[0].first 6 
+    can_message[3] = 0xA0;      // hex_value[0].first 7 msb
+    can_message[4] = 0x00;      // hex_value[0].second 0 lsb
+    can_message[5] = 0x00;      // hex_value[0].second 1 
+    can_message[6] = 0x00;      // hex_value[0].second 2 
+    can_message[7] = 0x00;      // hex_value[0].second 3
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    // 7th CAN packet - Hex value
+    can_message[0] = 0x07;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x00;      // hex_value[0].second 4 
+    can_message[3] = 0x00;      // hex_value[0].second 5
+    can_message[4] = 0x00;      // hex_value[0].second 6 
+    can_message[5] = 0xB0;      // hex_value[0].second 7 msb 
+    can_message[6] = 0x00;      // hex_value[0].third 0 lsb 
+    can_message[7] = 0x00;      // hex_value[0].third 1
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    // 8th CAN packet - Hex value
+    can_message[0] = 0x08;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x00;      // hex_value[0].third 2 
+    can_message[3] = 0xE0;      // hex_value[0].third 3
+    can_message[4] = 0x00;      // hex_value[0].third 4 
+    can_message[5] = 0x00;      // hex_value[0].third 5 
+    can_message[6] = 0x00;      // hex_value[0].third 6 
+    can_message[7] = 0x00;      // hex_value[0].third 7 msb
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+
+    // 9th CAN packet - Hex value
+    can_message[0] = 0x09;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x87;      // hex_value[1].first 0 lsb
+    can_message[3] = 0xA9;      // hex_value[1].first 1
+    can_message[4] = 0x00;      // hex_value[1].first 2
+    can_message[5] = 0x00;      // hex_value[1].first 3 
+    can_message[6] = 0x00;      // hex_value[1].first 4 
+    can_message[7] = 0x00;      // hex_value[1].first 5
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    // 10th CAN packet - Hex value
+    can_message[0] = 0x0A;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x00;      // hex_value[1].first 6 
+    can_message[3] = 0x00;      // hex_value[1].first 7 msb
+    can_message[4] = 0x00;      // hex_value[1].second 0 lsb
+    can_message[5] = 0x00;      // hex_value[1].second 1 
+    can_message[6] = 0x00;      // hex_value[1].second 2 
+    can_message[7] = 0x00;      // hex_value[1].second 3
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    // 11th CAN packet - Hex value
+    can_message[0] = 0x0B;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x00;      // hex_value[1].second 4 
+    can_message[3] = 0x00;      // hex_value[1].second 5
+    can_message[4] = 0x00;      // hex_value[1].second 6 
+    can_message[5] = 0x00;      // hex_value[1].second 7 msb 
+    can_message[6] = 0x00;      // hex_value[1].third 0 lsb 
+    can_message[7] = 0xF0;      // hex_value[1].third 1
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+
+    // 12th CAN packet - Hex value
+    can_message[0] = 0x0C;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x00;      // hex_value[1].third 2 
+    can_message[3] = 0x00;      // hex_value[1].third 3
+    can_message[4] = 0x00;      // hex_value[1].third 4 
+    can_message[5] = 0x00;      // hex_value[1].third 5 
+    can_message[6] = 0x00;      // hex_value[1].third 6 
+    can_message[7] = 0x00;      // hex_value[1].third 7 msb
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+
+
+    // 13th CAN packet - Hex value
+    can_message[0] = 0x0D;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x87;      // hex_value[1].first 0 lsb
+    can_message[3] = 0xB9;      // hex_value[1].first 1
+    can_message[4] = 0x00;      // hex_value[1].first 2
+    can_message[5] = 0x00;      // hex_value[1].first 3 
+    can_message[6] = 0x00;      // hex_value[1].first 4 
+    can_message[7] = 0x00;      // hex_value[1].first 5
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    // 14th CAN packet - Hex value
+    can_message[0] = 0x0E;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x00;      // hex_value[1].first 6 
+    can_message[3] = 0x00;      // hex_value[1].first 7 msb
+    can_message[4] = 0x00;      // hex_value[1].second 0 lsb
+    can_message[5] = 0x00;      // hex_value[1].second 1 
+    can_message[6] = 0x00;      // hex_value[1].second 2 
+    can_message[7] = 0x00;      // hex_value[1].second 3
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    // 15th CAN packet - Hex value
+    can_message[0] = 0x0F;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x00;      // hex_value[1].second 4 
+    can_message[3] = 0x00;      // hex_value[1].second 5
+    can_message[4] = 0x00;      // hex_value[1].second 6 
+    can_message[5] = 0x00;      // hex_value[1].second 7 msb 
+    can_message[6] = 0x00;      // hex_value[1].third 0 lsb 
+    can_message[7] = 0x00;      // hex_value[1].third 1
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+
+    // 16th CAN packet - Hex value
+    can_message[0] = 0x10;      // seq no
+    can_message[1] = 0x7A;      // communication if
+    can_message[2] = 0x00;      // hex_value[1].third 2 
+    can_message[3] = 0x00;      // hex_value[1].third 3
+    can_message[4] = 0x00;      // hex_value[1].third 4 
+    can_message[5] = 0x00;      // hex_value[1].third 5 
+    can_message[6] = 0x00;      // hex_value[1].third 6 
+    can_message[7] = 0x00;      // hex_value[1].third 7 msb
+
+    print_can_message(can_message);
+    ir_rd_packet_handler(can_message);
+
+    print_decode_data(&received_ir_decoded_data);
+    generate_ir_signal();
+}
+
+void ir_rd_packet_handler(unsigned char *_can_message)
+{
+    uint8_t seq_no = 0;
+    uint8_t communication_id = 0;
+    uint8_t data[6] = {0, 0, 0, 0, 0, 0};
+
+    seq_no = _can_message[0];
+    communication_id = _can_message[1];
+
+    for(int i = 0; i < 6; i++)
+    {
+        data[i] = _can_message[i + 2];
+    }
+
+    ir_rd_data_packet(&seq_no, data, &communication_id);
+}
+
+void ir_rd_data_packet(uint8_t *_seq_no, uint8_t *_data, uint8_t *communication_id)
+{
+    /*
+        this method isn't match for the MCU,
+        MCU need different approch
+    */
+    if(*_seq_no == 1)
+    {
+        printf("Sequence %d received\n", *_seq_no);
+        received_ir_decoded_data.hdr_mark = ((_data[5] << 8) | (_data[4] << 0));
+    }
+
+    if(*_seq_no == 2)
+    {
+        printf("Sequence %d received\n", *_seq_no);
+        received_ir_decoded_data.hdr_space  = ((_data[1] << 8) | (_data[0] << 0));
+        received_ir_decoded_data.bit_mark   = ((_data[3] << 8) | (_data[2] << 0));
+        received_ir_decoded_data.zero_space = ((_data[5] << 8) | (_data[4] << 0));
+    }
+
+    if(*_seq_no == 3)
+    {
+        int _temp_secection_count = 0;
+        printf("Sequence %d received\n", *_seq_no);
+        received_ir_decoded_data.one_space  = ((_data[1] << 8) | (_data[0] << 0));
+        received_ir_decoded_data.flags      = _data[2];
+        received_ir_decoded_data.bits[0]    = _data[3];
+        received_ir_decoded_data.bits[1]    = _data[4];
+        received_ir_decoded_data.bits[2]    = _data[5];
+
+        // get number of sections in ir signal
+        _temp_secection_count = section_count();
+
+        if(get_bit((received_ir_decoded_data.flags), REPEAT) == 1)
+        {
+            received_ir_decoded_data.repeat = _temp_secection_count;
+        }
+        else
+        {
+            received_ir_decoded_data.repeat = 0;
+        }
+    }
+
+    if(*_seq_no == 4)
+    {
+        printf("Sequence %d received\n", *_seq_no);
+        received_ir_decoded_data.gap        = ((_data[1] << 8) | (_data[0] << 0));
+        received_ir_decoded_data.ftr_space  = ((_data[3] << 8) | (_data[2] << 0));
+        received_ir_decoded_data.ftr_mark   = ((_data[5] << 8) | (_data[4] << 0));
+    }
+
+    if(*_seq_no == 5)
+    {   
+        unsigned long long int _temp_hex_first = 0;
+        unsigned long long int _temp_data = 0;
+
+        printf("Sequence %d received\n", *_seq_no);
+
+        for(int i = 0; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_first = _temp_hex_first | _temp_data << (i * 8);
+        }
+        received_ir_decoded_data.decoded_val[0].first = received_ir_decoded_data.decoded_val[0].first | _temp_hex_first;
+    }
+
+    if(*_seq_no == 6)
+    {   
+        unsigned long long _temp_hex_first = 0;
+        unsigned long long _temp_hex_second = 0;
+        unsigned long long int _temp_data = 0;
+
+        printf("Sequence %d received\n", *_seq_no);
+        
+        // _temp_hex_first = ((_data[0] << 48) | (_data[1] << 56));
+        for(int i = 0; i < 2; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_first = _temp_hex_first | _temp_data << ((i + 6) * 8);
+        }
+        received_ir_decoded_data.decoded_val[0].first = received_ir_decoded_data.decoded_val[0].first | _temp_hex_first;
+
+
+        // _temp_hex_second = ((_data[2] << 0) | (_data[3] << 8) 
+        //                     | (_data[4] << 16) | (_data[5] << 24));
+        // received_ir_decoded_data.decoded_val[0].second = received_ir_decoded_data.decoded_val[0].second | _temp_hex_second;
+        for(int i = 2; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_second = _temp_hex_second | _temp_data << ((i - 2) * 8);
+        }
+        received_ir_decoded_data.decoded_val[0].second = received_ir_decoded_data.decoded_val[0].second | _temp_hex_second;
+    }
+
+    if(*_seq_no == 7)
+    {           
+        unsigned long long _temp_hex_second = 0;
+        unsigned long long _temp_hex_third = 0;
+        unsigned long long int _temp_data = 0;
+
+        printf("Sequence %d received\n", *_seq_no);
+        // _temp_hex_second = ((_data[0] << 32) | (_data[1] << 40) 
+        //                     | (_data[2] << 48) | (_data[3] << 56));
+        // received_ir_decoded_data.decoded_val[0].second = received_ir_decoded_data.decoded_val[0].second | _temp_hex_second;
+        for(int i = 0; i < 4; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_second = _temp_hex_second | _temp_data << ((i + 4) * 8);
+        }
+        received_ir_decoded_data.decoded_val[0].second = received_ir_decoded_data.decoded_val[0].second | _temp_hex_second;
+
+        // _temp_hex_third = ((_data[4] << 0) | (_data[5] << 8));
+        // received_ir_decoded_data.decoded_val[0].third = received_ir_decoded_data.decoded_val[0].third | _temp_hex_third;
+        for(int i = 4; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_third = _temp_hex_third | _temp_data << ((i - 4) * 8);
+        }
+        received_ir_decoded_data.decoded_val[0].third = received_ir_decoded_data.decoded_val[0].third | _temp_hex_third;
+    }
+
+    if(*_seq_no == 8)
+    {   
+        unsigned long long _temp_hex_third = 0;
+        unsigned long long int _temp_data = 0;
+        printf("Sequence %d received\n", *_seq_no);
+
+        // _temp_hex_third = ((_data[0] << 16) | (_data[1] << 24) | (_data[2] << 32) 
+        //                     | (_data[3] << 40)| (_data[4] << 48) | (_data[5] << 56));
+
+        // received_ir_decoded_data.decoded_val[0].third = received_ir_decoded_data.decoded_val[0].third | _temp_hex_third;
+        for(int i = 0; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_third = _temp_hex_third | _temp_data << ((i + 2) * 8);
+        }
+        received_ir_decoded_data.decoded_val[0].third = received_ir_decoded_data.decoded_val[0].third | _temp_hex_third;
+
+    }
+
+    if(*_seq_no == 9)
+    {   
+        unsigned long long int _temp_hex_first = 0;
+        unsigned long long int _temp_data = 0;
+
+        printf("Sequence %d received\n", *_seq_no);
+
+        for(int i = 0; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_first = _temp_hex_first | _temp_data << (i * 8);
+        }
+        received_ir_decoded_data.decoded_val[1].first = received_ir_decoded_data.decoded_val[1].first | _temp_hex_first;
+    }
+
+    if(*_seq_no == 10)
+    {   
+        unsigned long long _temp_hex_first = 0;
+        unsigned long long _temp_hex_second = 0;
+        unsigned long long int _temp_data = 0;
+
+        printf("Sequence %d received\n", *_seq_no);
+        
+        for(int i = 0; i < 2; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_first = _temp_hex_first | _temp_data << ((i + 6) * 8);
+        }
+        received_ir_decoded_data.decoded_val[1].first = received_ir_decoded_data.decoded_val[1].first | _temp_hex_first;
+
+        for(int i = 2; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_second = _temp_hex_second | _temp_data << ((i - 2) * 8);
+        }
+        received_ir_decoded_data.decoded_val[1].second = received_ir_decoded_data.decoded_val[1].second | _temp_hex_second;
+    }
+
+    if(*_seq_no == 11)
+    {           
+        unsigned long long _temp_hex_second = 0;
+        unsigned long long _temp_hex_third = 0;
+        unsigned long long int _temp_data = 0;
+
+        printf("Sequence %d received\n", *_seq_no);
+        
+        for(int i = 0; i < 4; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_second = _temp_hex_second | _temp_data << ((i + 4) * 8);
+        }
+        received_ir_decoded_data.decoded_val[1].second = received_ir_decoded_data.decoded_val[1].second | _temp_hex_second;
+
+        for(int i = 4; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_third = _temp_hex_third | _temp_data << ((i - 4) * 8);
+        }
+        received_ir_decoded_data.decoded_val[1].third = received_ir_decoded_data.decoded_val[1].third | _temp_hex_third;
+    }
+
+    if(*_seq_no == 12)
+    {   
+        unsigned long long _temp_hex_third = 0;
+        unsigned long long int _temp_data = 0;
+        printf("Sequence %d received\n", *_seq_no);
+
+        for(int i = 0; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_third = _temp_hex_third | _temp_data << ((i + 2) * 8);
+        }
+        received_ir_decoded_data.decoded_val[1].third = received_ir_decoded_data.decoded_val[1].third | _temp_hex_third;
+    }
+
+    if(*_seq_no == 13)
+    {   
+        unsigned long long int _temp_hex_first = 0;
+        unsigned long long int _temp_data = 0;
+
+        printf("Sequence %d received\n", *_seq_no);
+
+        for(int i = 0; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_first = _temp_hex_first | _temp_data << (i * 8);
+        }
+        received_ir_decoded_data.decoded_val[2].first = received_ir_decoded_data.decoded_val[2].first | _temp_hex_first;
+    }
+
+    if(*_seq_no == 14)
+    {   
+        unsigned long long _temp_hex_first = 0;
+        unsigned long long _temp_hex_second = 0;
+        unsigned long long int _temp_data = 0;
+
+        printf("Sequence %d received\n", *_seq_no);
+        
+        for(int i = 0; i < 2; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_first = _temp_hex_first | _temp_data << ((i + 6) * 8);
+        }
+        received_ir_decoded_data.decoded_val[2].first = received_ir_decoded_data.decoded_val[2].first | _temp_hex_first;
+
+        for(int i = 2; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_second = _temp_hex_second | _temp_data << ((i - 2) * 8);
+        }
+        received_ir_decoded_data.decoded_val[2].second = received_ir_decoded_data.decoded_val[2].second | _temp_hex_second;
+    }
+
+    if(*_seq_no == 15)
+    {           
+        unsigned long long _temp_hex_second = 0;
+        unsigned long long _temp_hex_third = 0;
+        unsigned long long int _temp_data = 0;
+
+        printf("Sequence %d received\n", *_seq_no);
+        
+        for(int i = 0; i < 4; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_second = _temp_hex_second | _temp_data << ((i + 4) * 8);
+        }
+        received_ir_decoded_data.decoded_val[2].second = received_ir_decoded_data.decoded_val[2].second | _temp_hex_second;
+
+        for(int i = 4; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_third = _temp_hex_third | _temp_data << ((i - 4) * 8);
+        }
+        received_ir_decoded_data.decoded_val[2].third = received_ir_decoded_data.decoded_val[2].third | _temp_hex_third;
+    }
+
+    if(*_seq_no == 16)
+    {   
+        unsigned long long _temp_hex_third = 0;
+        unsigned long long int _temp_data = 0;
+        printf("Sequence %d received\n", *_seq_no);
+
+        for(int i = 0; i < 6; i ++)
+        {
+            _temp_data = _data[i];
+            _temp_hex_third = _temp_hex_third | _temp_data << ((i + 2) * 8);
+        }
+        received_ir_decoded_data.decoded_val[2].third = received_ir_decoded_data.decoded_val[2].third | _temp_hex_third;
+    }
+}
+
+
+void generate_ir_signal()
+{
+    int16_t bit_count = 0;
+    int data_buf_counter = 0;
+    int temp_count = 0;
+    int temp_section_count = 0;
+
+    bit_count = calc_bit_count();
+    printf("Needed Bit Count : %d\n", bit_count);
+
+    temp_section_count = section_count();
+    printf("Section Count : %d\n", temp_section_count);
+
+    uint16_t *generated_ir_buf = new uint16_t[bit_count];
+
+
+    generated_ir_buf[data_buf_counter++] = received_ir_decoded_data.hdr_mark;
+    generated_ir_buf[data_buf_counter++] = received_ir_decoded_data.hdr_space;
+
+    
+    if(temp_section_count == 1)
+    {
+        // one section available with/ without footer
+        // generate 1st packet
+        gen_ir_pattern_single_section(received_ir_decoded_data.bits[0], 
+                                        received_ir_decoded_data.decoded_val[0],
+                                        &data_buf_counter,
+                                        generated_ir_buf);
+
+        // check if there is a footer
+        if ((get_bit(received_ir_decoded_data.flags, NEC_FOOTER) == 1) || 
+            (get_bit(received_ir_decoded_data.flags, UNIQUE_FOOTER) == 1))
+        {
+            bool _temp_is_nec = false;
+            _temp_is_nec = (get_bit(received_ir_decoded_data.flags, NEC_FOOTER) == 1) ? true : false;
+            gen_ir_footer(&data_buf_counter, generated_ir_buf, _temp_is_nec);
+        }
+
+        // generate end
+        gen_ir_end(&data_buf_counter, generated_ir_buf);
+
+        // print buffer
+        print_ir_buffer(generated_ir_buf, data_buf_counter);
+    }
+    
+    else if(temp_section_count == 2)
+    {
+        // two sections available with/without repeat and with/without footer
+
+        // generate 1st packet
+        gen_ir_pattern_single_section(received_ir_decoded_data.bits[0], 
+                                        received_ir_decoded_data.decoded_val[0],
+                                        &data_buf_counter,
+                                        generated_ir_buf);
+        
+        // generate the gap between packets
+        gen_ir_gap(&data_buf_counter, generated_ir_buf);
+
+        // check if there is a repeat
+        if(get_bit(received_ir_decoded_data.flags, REPEAT) == 1)
+        {
+            // generate the 2nd packet as a repeat
+            gen_ir_pattern_single_section(received_ir_decoded_data.bits[0], 
+                                        received_ir_decoded_data.decoded_val[0],
+                                        &data_buf_counter,
+                                        generated_ir_buf);
+        }
+        else
+        {
+            // no-repreat; generate 2nd packet
+            gen_ir_pattern_single_section(received_ir_decoded_data.bits[1], 
+                                        received_ir_decoded_data.decoded_val[1],
+                                        &data_buf_counter,
+                                        generated_ir_buf);
+        }
+
+        // check if there is a footer
+        if ((get_bit(received_ir_decoded_data.flags, NEC_FOOTER) == 1) || 
+            (get_bit(received_ir_decoded_data.flags, UNIQUE_FOOTER) == 1))
+        {
+            bool _temp_is_nec = false;
+            _temp_is_nec = (get_bit(received_ir_decoded_data.flags, NEC_FOOTER) == 1) ? true : false;
+            gen_ir_footer(&data_buf_counter, generated_ir_buf, _temp_is_nec);
+        }
+
+        // generate end
+        gen_ir_end(&data_buf_counter, generated_ir_buf);
+        
+        // print ir sigal array
+        print_ir_buffer(generated_ir_buf, data_buf_counter);
+        
+    }
+
+    else if(temp_section_count == 3)
+    {
+        // three sections available with/without repeat and without footer
+
+        // generate 1st packet
+        gen_ir_pattern_single_section(received_ir_decoded_data.bits[0], 
+                                        received_ir_decoded_data.decoded_val[0],
+                                        &data_buf_counter,
+                                        generated_ir_buf);
+        
+        // generate the gap between packets
+        gen_ir_gap(&data_buf_counter, generated_ir_buf);
+
+        // check if there is a repeat
+        if(get_bit(received_ir_decoded_data.flags, REPEAT) == 1)
+        {
+            // generate the 2nd packet as a repeat 
+            gen_ir_pattern_single_section(received_ir_decoded_data.bits[0], 
+                                        received_ir_decoded_data.decoded_val[0],
+                                        &data_buf_counter,
+                                        generated_ir_buf);
+        
+            gen_ir_gap(&data_buf_counter, generated_ir_buf);
+
+            // generate the 3rd packet as a repeat 
+            gen_ir_pattern_single_section(received_ir_decoded_data.bits[0], 
+                                        received_ir_decoded_data.decoded_val[0],
+                                        &data_buf_counter,
+                                        generated_ir_buf);
+            
+        }
+        else
+        {
+            // no-repreat; generate 2nd packet
+            gen_ir_pattern_single_section(received_ir_decoded_data.bits[1], 
+                                        received_ir_decoded_data.decoded_val[1],
+                                        &data_buf_counter,
+                                        generated_ir_buf);
+                
+            gen_ir_gap(&data_buf_counter, generated_ir_buf);
+
+            // no-repreat; generate 3rd packet
+            gen_ir_pattern_single_section(received_ir_decoded_data.bits[2], 
+                                        received_ir_decoded_data.decoded_val[2],
+                                        &data_buf_counter,
+                                        generated_ir_buf);
+
+        }
+
+        // check if there is a footer
+        if ((get_bit(received_ir_decoded_data.flags, NEC_FOOTER) == 1) || 
+            (get_bit(received_ir_decoded_data.flags, UNIQUE_FOOTER) == 1))
+        {
+            bool _temp_is_nec = false;
+            _temp_is_nec = (get_bit(received_ir_decoded_data.flags, NEC_FOOTER) == 1) ? true : false;
+            gen_ir_footer(&data_buf_counter, generated_ir_buf, _temp_is_nec);
+        }
+
+        // generate end
+        gen_ir_end(&data_buf_counter, generated_ir_buf);
+
+        // print ir sigal array
+        print_ir_buffer(generated_ir_buf, data_buf_counter);
+    }
+
+}
+
+void gen_ir_pattern_single_section(uint8_t _bits, ir_val_hex_t _decoded_val, int* _buf_counter, uint16_t *_ir_buf)
+{
+    int temp_count = 0;
+    int temp_buf_counter = 0;
+
+    temp_buf_counter = *_buf_counter;
+
+    for(int i = 0; i < _bits; i++)
+    {
+        if(i < 64)
+        {
+            if((_decoded_val.first & (1ull << temp_count)) >> temp_count)
+            {
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.bit_mark;
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.one_space;
+            }
+            else
+            {
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.bit_mark;
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.zero_space;
+            }
+        }
+        else if(i < 128)
+        {
+            if((_decoded_val.second & (1ull << (temp_count - 64))) >> (temp_count - 64))
+            {
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.bit_mark;
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.one_space;
+            }
+            else
+            {
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.bit_mark;
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.zero_space;
+            }
+        }
+        else
+        {
+            if((_decoded_val.third & (1ull << (temp_count - 128))) >> (temp_count - 128))
+            {
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.bit_mark;
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.one_space;
+            }
+            else
+            {
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.bit_mark;
+                _ir_buf[temp_buf_counter++] = received_ir_decoded_data.zero_space;
+            }
+        }
+
+	    temp_count ++;
+    }
+
+    *_buf_counter = temp_buf_counter;
+}
+
+void gen_ir_gap(int *_buf_counter, uint16_t *_ir_buf)
+{
+    int temp_buf_counter = 0;
+    temp_buf_counter = *_buf_counter;
+
+    _ir_buf[temp_buf_counter++] = received_ir_decoded_data.bit_mark;
+    _ir_buf[temp_buf_counter++] = received_ir_decoded_data.gap;
+    _ir_buf[temp_buf_counter++] = received_ir_decoded_data.hdr_mark;
+    _ir_buf[temp_buf_counter++] = received_ir_decoded_data.hdr_space;
+
+    *_buf_counter = temp_buf_counter;
+}
+
+void gen_ir_end(int *_buf_counter, uint16_t *_ir_buf)
+{
+    int temp_buf_counter = 0;
+    temp_buf_counter = *_buf_counter;
+
+    _ir_buf[temp_buf_counter++] = received_ir_decoded_data.bit_mark;
+    _ir_buf[temp_buf_counter++] = IR_END_SPACE;
+
+    *_buf_counter = temp_buf_counter;
+}
+
+void gen_ir_footer(int *_buf_counter, uint16_t *_ir_buf, bool is_nec)
+{
+    int temp_buf_counter = 0;
+    temp_buf_counter = *_buf_counter;
+
+    _ir_buf[temp_buf_counter++] = received_ir_decoded_data.bit_mark;
+    _ir_buf[temp_buf_counter++] = received_ir_decoded_data.gap;
+
+    if(is_nec)
+    {
+        // this is NEC footer; footer mark = header mark
+        _ir_buf[temp_buf_counter++] = received_ir_decoded_data.hdr_mark;
+    }
+    else
+    {
+        // unique footer
+        _ir_buf[temp_buf_counter++] = received_ir_decoded_data.ftr_mark;
+    }
+
+    _ir_buf[temp_buf_counter++] = received_ir_decoded_data.ftr_space;
+
+    *_buf_counter = temp_buf_counter;
+}
+
+int16_t calc_bit_count()
+{
+    int16_t bit_count = 0;
+    int _temp_section_count = 0;
+
+    _temp_section_count = get_bit(received_ir_decoded_data.flags, FIRST_PACKET)
+                            + get_bit(received_ir_decoded_data.flags, SECOND_PACKET)
+                            + get_bit(received_ir_decoded_data.flags, THIRD_PACKET);
+
+    if((get_bit(received_ir_decoded_data.flags, NEC_FOOTER) == 0) && 
+        (get_bit(received_ir_decoded_data.flags, UNIQUE_FOOTER) == 0))
+    {
+        // no footer available
+        // printf("No Footer available\n");
+
+        if(_temp_section_count == 1)
+        {
+            // 1 section with no footer
+            bit_count = IR_HEADER_LENGTH + 
+                        (received_ir_decoded_data.bits[0] * 2) + 
+                        IR_END_LENGTH;
+        }
+        else if(_temp_section_count == 2)
+        {
+            if(get_bit(received_ir_decoded_data.flags, REPEAT) == 1)
+            {
+                // 2 sections with repeat and without footer
+                bit_count = IR_HEADER_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_END_LENGTH;
+            }
+            else
+            {
+                // 2 sections without repeat and without footer
+                bit_count = IR_HEADER_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[1] * 2) +
+                            IR_END_LENGTH;
+            }
+        }
+
+        else if(_temp_section_count == 3)
+        {
+            if(get_bit(received_ir_decoded_data.flags, REPEAT) == 1)
+            {
+                // 3 sections with repeat and without footer
+                bit_count = IR_HEADER_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_END_LENGTH;
+            }
+            else
+            {
+                // 3 sections without repeat and without footer
+                bit_count = IR_HEADER_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[1] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[1] * 2) +
+                            IR_END_LENGTH;
+            }
+        }
+    }
+    else if((get_bit(received_ir_decoded_data.flags, NEC_FOOTER) == 1) ||
+             (get_bit(received_ir_decoded_data.flags, UNIQUE_FOOTER) == 1))
+    {
+        // NEC footer available
+        // printf("NEC or Unique Footer available\n");
+
+        if(_temp_section_count == 1)
+        {
+            // 1 section with footer
+            bit_count = IR_HEADER_LENGTH + 
+                        (received_ir_decoded_data.bits[0] * 2) + 
+                        IR_FOOTER_LENGTH + 
+                        IR_END_LENGTH;
+        }
+        else if(_temp_section_count == 2)
+        {
+            if(get_bit(received_ir_decoded_data.flags, REPEAT) == 1)
+            {
+                // 2 sections with repeat and with footer
+                bit_count = IR_HEADER_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_FOOTER_LENGTH + 
+                            IR_END_LENGTH;
+            }
+            else
+            {
+                // 2 sections without repeat and with footer
+                bit_count = IR_HEADER_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[1] * 2) +
+                            IR_FOOTER_LENGTH + 
+                            IR_END_LENGTH;
+            }
+        }
+
+        else if(_temp_section_count == 3)
+        {
+            if(get_bit(received_ir_decoded_data.flags, REPEAT) == 1)
+            {
+                // 3 sections with repeat and with footer
+                bit_count = IR_HEADER_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_FOOTER_LENGTH + 
+                            IR_END_LENGTH;
+            }
+            else
+            {
+                // 3 sections without repeat and with footer
+                bit_count = IR_HEADER_LENGTH + 
+                            (received_ir_decoded_data.bits[0] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[1] * 2) +
+                            IR_GAP_LENGTH + 
+                            (received_ir_decoded_data.bits[1] * 2) +
+                            IR_FOOTER_LENGTH + 
+                            IR_END_LENGTH;
+            }
+        }
+    }
+
+    return bit_count;
+}
+
+int section_count()
+{
+    int _temp_section_count = 0;
+    _temp_section_count = get_bit(received_ir_decoded_data.flags, FIRST_PACKET)
+                            + get_bit(received_ir_decoded_data.flags, SECOND_PACKET)
+                            + get_bit(received_ir_decoded_data.flags, THIRD_PACKET);
+
+    return _temp_section_count;
+}
+
+
+void print_ir_buffer(uint16_t *_buf, int16_t size_buf)
+{
+    for(int i = 0; i < size_buf; i++)
+    {
+        if((i > 0) && ((i % 10) == 0))
+        {
+            printf("\n");
+        }
+        printf("%d, ", _buf[i]);
+    }
+    
+    printf("\n");
 }
